@@ -358,7 +358,7 @@ router: {
 - https://zh.nuxtjs.org/api/configuration-router
 
 ## 视图
-![](static/nuxt1.png)
+![](../static/nuxt1.png)
 
 ### 模板
 
@@ -464,7 +464,7 @@ asyncData(context)
 > https://nuxtjs.org/guide/vuex-store
 
 ## Nuxt 渲染流程
-![](static/nuxt2.svg)
+![](../static/nuxt2.svg)
 下图阐述了 Nuxt.js 应用一个完整的服务器请求到渲染（或用户通过 <nuxt-link> 切换路由渲染页
 面）的流程：
 

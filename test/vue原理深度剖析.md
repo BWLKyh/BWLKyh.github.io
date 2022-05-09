@@ -125,13 +125,17 @@ console.log(vm);
 
 动态参数的获取和使用
 
-```javascript
 // Detail.vue
-// 1. 通过当前路由规则,获取数据,强依赖路由
+```vue
+<template>
+<div>
+<!-- 1. 通过当前路由规则,获取数据,强依赖路由 -->
 <div>{{$route.params.id}}</div>
-// 2. 路由规则中开启 props 传参(推荐)
+<!-- 2. 路由规则中开启 props 传参(推荐) -->
 <div>{{id}}</div>
-// ...
+<!-- ... -->
+</div>
+</template>
 <script>
 export default {
     name:'Detail',
@@ -617,7 +621,7 @@ em.$emit("click");
   dep.notify();
   ```
 
-![两种模式对比](static/DesignPatterns.png)
+![两种模式对比](../static/DesignPatterns.png)
 总结:
 
 - 观察者模式是由具体目标调度,比如事件触发,Dep 就回去调用观察者的方法,所以观察者模式的订阅者预发布者之间是存在依赖的
@@ -630,7 +634,7 @@ em.$emit("click");
   $data:真正监视数据变化的地方
   _data:与$data 指向同一个对象,私有成员
 - 整体结构
-  ![ ](static/vue.png)
+  ![ ](../static/vue.png)
 - 可以用 js 构造函数或 es6 中的类实现
 - 功能:
   1. 接收初始化参数
@@ -701,7 +705,7 @@ Compiler
 
 ### Dep
 
-![ ](static/dep.png)
+![ ](../static/dep.png)
 
 - 功能
   - 收集依赖,添加观察者(watcher)
@@ -718,7 +722,7 @@ Dep
 
 ### Watcher
 
-![ ](static/watcher.png)
+![ ](../static/watcher.png)
 
 - 功能
   - 当数据变化触发依赖,dep 通知所有的 Watcher 实例更新视图
@@ -748,7 +752,7 @@ Watcher
 
 ## 总结
 
-![ ](static/vue-reactive.png)
+![ ](../static/vue-reactive.png)
 
 - Compiler 只在初始化时更新视图,Watcher 在数据变化时更新视图
 - 问题
@@ -963,21 +967,21 @@ new Vue({
 
 ### patchVnode
 
-![ ](static/patcVnode.png)
+![ ](../static/patcVnode.png)
 
 ### updateChildren
 
-![ ](static/Diff1.png)
-![ ](static/Diff2.png)
-![ ](static/Diff3.png)
-![ ](static/Diff4.png)
-![ ](static/Diff5.png)
-![ ](static/Diff6.png)
-![ ](static/Diff7.png)
-![ ](static/Diff8.png)
-![ ](static/Diff9.png)
-![ ](static/Diff10.png)
-![ ](static/Diff11.png)
+![ ](../static/Diff1.png)
+![ ](../static/Diff2.png)
+![ ](../static/Diff3.png)
+![ ](../static/Diff4.png)
+![ ](../static/Diff5.png)
+![ ](../static/Diff6.png)
+![ ](../static/Diff7.png)
+![ ](../static/Diff8.png)
+![ ](../static/Diff9.png)
+![ ](../static/Diff10.png)
+![ ](../static/Diff11.png)
 
 ### key 值的意义
 

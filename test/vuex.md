@@ -263,7 +263,7 @@ export default {
 
 ### 核心概念回顾
 
-![](static/vuex.png)
+![](../static/vuex.png)
 
 #### 示例演示
 
@@ -413,8 +413,8 @@ Store
 ---- products
 -------- products
 ```
-```vue
 // App.vue
+```vue
 <template>
 <!-- <div>products:{{$store.state.products.products}}</div> -->
 <div>products:{{products}}</div>
