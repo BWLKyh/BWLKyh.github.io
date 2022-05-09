@@ -2,7 +2,7 @@
 sort: 1
 ---
 
-# My Articles
+# My Articles/学习笔记
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}
