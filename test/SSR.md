@@ -100,7 +100,7 @@ app.listen(3000, () => console.log('running...'))
 
 客户端代码：
 
-```
+```txt
 <!DOCTYPE html>
 <html lang="en">
   <head>
