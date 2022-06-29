@@ -22,6 +22,7 @@ sort: 19
     1. 客户端（应用层）ArcGIS Desktop GIS工程师
     2. 服务 GIS服务器，GeoServer，nginx（瓦片等静态资源）GIS工程师
     3. 数据（文件格式数据，数据库SDE数据，互联网在线资源）软件工程师
+
 ## GIS坐标系
 - 地球非标准椭圆，表面崎岖不平
 - 地球空间模型：大地椭球体，大地水准面
@@ -74,4 +75,5 @@ sort: 19
     1. EPSG4326 WGS84
     2. EPSG4490 CGCS2000
     3. EPSG3857 Web Mercator
+
 ## GIS数据
