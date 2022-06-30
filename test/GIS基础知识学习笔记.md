@@ -8,6 +8,7 @@ sort: 19
 - 应用领域：何时何地何事
 - 应用价值：呈现还原规划，数据挖掘统计分析
 - `OGC标准`：开放地理空间信息联盟
+    - 扩展:[cesium调用OGC服务](https://zhuanlan.zhihu.com/p/156925375)
 
 - GIS平台：ESRI ArcGIS，SuperMap，SKyline，开源GIS
 - 开源GIS常用产品
