@@ -167,23 +167,24 @@ sort: 19
 - 在网络环境下的一组与地理信息相关的软件功能示例，通过接口暴露封装的GIS功能
 
 ### 常用服务：
-    1. ArcGIS Server
-        - MapServer瓦片服务，MapServer动态服务，FeatureServer矢量服务
+1. ArcGIS Server
+    - MapServer瓦片服务，MapServer动态服务，FeatureServer矢量服务
 
-    2. GeoServer
-        - OpenGIS Web 服务器规范的J2EE实现，可以方便发布地图数据
-        - OGC标准WMS，WMTS，WFS（常用GeoServer发布）
-        - WMS
-        - WMTS
-        - WFS
+2. GeoServer
+    - OpenGIS Web 服务器规范的J2EE实现，可以方便发布地图数据
+    - OGC标准WMS，WMTS，WFS（常用GeoServer发布）
+    - WMS（web map service）网络地图服务，将数据源转换成图片，可放大缩小
+    - WMTS（web map tile service）网络地图切片服务，比WMTS快但不灵活
+        - TMS（tiled map service）切片是正方形，WMTS可以是矩形，金字塔横纵坐标相反
+    - WFS（web feature service）网络要素服务，提供矢量图形，缩放不失真，方便交互编辑等
 
-    3. 静态资源数据服务（web容器发布）
-        - 瓦片地图，terrain地形，3dtiles三维模型等
-        - 除了GIS服务器也可以用http容器（IIS，Tomcat，Nginx，Node等）发布，简单方便效率高
+3. 静态资源数据服务（web容器发布）
+    - 瓦片地图，terrain地形，3dtiles三维模型等
+    - 除了GIS服务器也可以用http容器（IIS，Tomcat，Nginx，Node等）发布，简单方便效率高
 
-    4. 互联网在线地图服务（实时性高，服务全面）
-        - 国际：google（唯一全能），mapbox，bing，argis online
-        - 国内：天地图（国家测绘局，OGC标准），高德（GCJ-02）百度（BD-09）腾讯等
+4. 互联网在线地图服务（实时性高，服务全面）
+    - 国际：google（唯一全能），mapbox，bing，argis online
+    - 国内：天地图（国家测绘局，OGC标准），高德（GCJ-02）百度（BD-09）腾讯等
 
 ### 项目中GIS服务发布
 - Nginx：离线底图，terrain，3dtiles三维模型等
