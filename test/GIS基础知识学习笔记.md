@@ -174,7 +174,7 @@ sort: 19
     - OpenGIS Web 服务器规范的J2EE实现，可以方便发布地图数据
     - OGC标准WMS，WMTS，WFS（常用GeoServer发布）
     - WMS（web map service）网络地图服务，将数据源转换成图片，可放大缩小
-    - WMTS（web map tile service）网络地图切片服务，比WMTS快但不灵活
+    - WMTS（web map tile service）网络地图切片服务，比WMS快但不灵活
         - TMS（tiled map service）切片是正方形，WMTS可以是矩形，金字塔横纵坐标相反
     - WFS（web feature service）网络要素服务，提供矢量图形，缩放不失真，方便交互编辑等
 
