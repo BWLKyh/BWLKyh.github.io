@@ -313,14 +313,15 @@ OpenGL ES着色器语言GLSL ES核心特性, 支持一些转为图形学而设�
 - 定义盒状可视空间: 
     - Matrix4.setOrtho(left,right,bottom,top,near,far)
     - 示例程序（OrthoView.html）, 示例程序（OrthoView.js）, JavaScript 修改HTML 元素, 顶点着色器的执行流程, 修改near 和far 值, 补上缺掉的角（LookAtTrianglesWithKeys_ViewVolume.js）
- 
+
 ### 可视空间（透视投影）
 ![perspective_view](../static/webgl_perspective_view.jpeg)
 定义透视投影可视空间:Matrix4.setPerspetive(fov,aspect,near,far)
 - 示例程序（perspectiveview.js）
 投影矩阵的作用: 将金字塔状可视空间变成了盒装可视空间，又称`规范立方体`(Canonical View Volume)
+
 ### 共冶一炉（模型矩阵、视图矩阵和投影矩阵）
-<投影矩阵>x<视图矩阵>x<模型矩阵>x<顶点坐标>
+`<投影矩阵>x<视图矩阵>x<模型矩阵>x<顶点坐标>`
 - 示例程序（PerspectiveView_mvp.js）
 
 ### 正确处理对象的前后关系
@@ -330,6 +331,7 @@ OpenGL ES着色器语言GLSL ES核心特性, 支持一些转为图形学而设�
     - 示例程序（DepthBuffer.js）
 
 - 深度冲突：两表面过于接近，有限精度无法区分
+
 - 多边形偏移机制： Z加偏移量，消除深度冲突
     1. gl.enable(gl.POLYGON_OFFSET_FILL);
     2. gl.polygonOffset(1.0, 1.0);
@@ -360,6 +362,7 @@ OpenGL ES着色器语言GLSL ES核心特性, 支持一些转为图形学而设�
     - 环境光下的漫反射-示例程序（LightedCube_ambient.js） 
 
 - 同时存在（不一定要用该公式）：<表面的反射光颜色>=<漫反射光颜色>+<环境反射光颜色>
+
 ### 运动物体的光照效果 
 魔法矩阵：逆转置矩阵 
 - 示例程序（LightedTranslatedRotatedCube.js） 
@@ -378,6 +381,7 @@ OpenGL ES着色器语言GLSL ES核心特性, 支持一些转为图形学而设�
 - 多节点模型-示例程序（MultiJointModel.js） 
 - 绘制部件（drawBox()）
 - 绘制部件（drawSegments()） 
+
 ### 着色器和着色器程序对象：initShaders() 函数的作用
 1. 创建着色器对象（gl.createShader()）
 2. 指定着色器对象的代码（gl.shaderSource()） 
@@ -416,15 +420,18 @@ OpenGL ES着色器语言GLSL ES核心特性, 支持一些转为图形学而设�
     - 示例程序（HUD.js）
 
 - 在网页上方显示三维物体: WebGL的<\canvas>在上，α从1.0->0.0
+
 ### 雾化（大气效果）
 - 如何实现雾化：
     1. 线性雾化：雾化程度（雾化因子）取决于它与视点间的距离
     - 示例程序（Fog.js）
 
 - 使用w 分量：顶点视图坐标z轴分量 x -1（Fog_w.js）
+
 ### 绘制圆形的点
 - 如何实现圆形的点：gl_PointCoord
 - 示例程序（RoundedPoint.js）
+
 ### α 混合
 - 如何实现α 混合: 透过物体看到其他物体
     1. gl.enable(gl.BLEND)
@@ -443,6 +450,7 @@ OpenGL ES着色器语言GLSL ES核心特性, 支持一些转为图形学而设�
 ### 切换着色器 
 - 如何实现切换着色器
 - 示例程序（ProgramObject.js）
+
 ### 渲染到纹理
 将渲染结果作为纹理贴到另一个三维物体上
 - 帧缓冲区对象(depth attachment)和 渲染缓冲区对象(stencil attachment)
@@ -461,9 +469,11 @@ OpenGL ES着色器语言GLSL ES核心特性, 支持一些转为图形学而设�
 ### 绘制阴影
 如何实现阴影: 阴影贴图，深度贴图 -示例程序（Shadow.js）
 提高精度：消除马赫带 -示例程序（Shadow_highp.js）
+
 ### 加载三维模型 
 - OBJ 文件格式：模型信息
 - MTL 文件格式：材质贴图
+
 ### 响应上下文丢失 
 - 如何响应上下文丢失：监听上下文丢失/恢复事件，并利用全局变量
     - 示例程序（RotatingTriangle_contextLost.js）
@@ -475,6 +485,7 @@ OpenGL ES着色器语言GLSL ES核心特性, 支持一些转为图形学而设�
 1. WebGL 中无须交换缓冲区：自动执行
 2. GLSL ES 1.0 内置函数
 - 角度和三角函数，指数函数，通用函数，几何函数，矩阵函数，矢量函数，纹理查询函数
+
 3. 投影矩阵
     - 正射投影矩阵
     - 透视投影矩阵 
